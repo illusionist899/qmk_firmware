@@ -1,5 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
+#include "keycodes.h"
 #include "quantum.h"
 
 #ifdef SWAP_HANDS_ENABLE
@@ -128,9 +129,9 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(QK_MOUSE_WHEEL_DOWN);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(QK_MOUSE_WHEEL_UP);
         }
     }
     return true;
