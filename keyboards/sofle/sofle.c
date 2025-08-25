@@ -94,6 +94,9 @@ void print_status_narrow(void) {
         case 4:
             oled_write_P(PSTR("Adjust"), false);
             break;
+        case 5:
+            oled_write_P(PSTR("Numpad"), false);
+            break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
